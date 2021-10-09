@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:library_app_sqlite/src/models/author_model.dart';
 import 'package:library_app_sqlite/src/models/category.model.dart';
 
 import 'package:library_app_sqlite/src/widgets/bottom_appbar.dart';
