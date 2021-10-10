@@ -136,7 +136,7 @@ class _ListCategoryState extends State<ListCategory> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text('List Author'),
+        title: const Text('List Categories'),
       ),
       body: Center(
         child: FutureBuilder<List<Category>>(

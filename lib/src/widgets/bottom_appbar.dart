@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 
 class BottomAppbar extends StatefulWidget {
   const BottomAppbar({
@@ -33,25 +34,20 @@ class _BottomAppbarState extends State<BottomAppbar> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-      shape: const CircularNotchedRectangle(),
-      notchMargin: 4,
-      clipBehavior: Clip.antiAlias,
-      child: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: widget._currentIndex,
-        onTap: _onItemTapped,
-        selectedItemColor: Colors.yellowAccent,
-        unselectedItemColor: Colors.brown,
-        backgroundColor: Colors.grey,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Book'),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Author'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.category), label: 'Category'),
-        ],
-      ),
+    return DotNavigationBar(
+      currentIndex: widget._currentIndex,
+      onTap: _onItemTapped,
+      marginR: const EdgeInsets.symmetric(horizontal: 15),
+      backgroundColor: Colors.black,
+      margin: const EdgeInsets.symmetric(horizontal: 15),
+      dotIndicatorColor: Colors.transparent,
+      unselectedItemColor: Colors.grey,
+      items: [
+        DotNavigationBarItem(icon: const Icon(Icons.home)),
+        DotNavigationBarItem(icon: const Icon(Icons.book)),
+        DotNavigationBarItem(icon: const Icon(Icons.people)),
+        DotNavigationBarItem(icon: const Icon(Icons.category)),
+      ],
     );
   }
 }
